@@ -31,16 +31,16 @@ char navigate_to_menu(char choice)
     switch (choice)
     {
     case '1':
-        book_an_appointment();
+        // book_an_appointment();
         break;
     case '2':
         login();
         break;
     case '3':
-        blood_bank_info();
+        // blood_bank_info();
         break;
     case '4':
-        chatbot();
+        // chatbot();
         break;
     }
 }
