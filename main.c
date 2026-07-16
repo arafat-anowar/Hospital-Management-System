@@ -1,11 +1,11 @@
-//Global Header File 
-#include<stdio.h>
-#include<string.h>
-#include<conio.h>
-#include<windows.h>
-#include<time.h>
+// Global Header File
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+#include <windows.h>
+#include <time.h>
 
-//Local Header File
+// Local Header File
 #include "includes\login.h"
 #include "includes\admin.h"
 #include "includes\receptionist.h"
@@ -13,19 +13,23 @@
 #include "includes\patient.h"
 #include "includes\bloodbank.h"
 
-//Functions
+// Functions
 void welcome_screen();
 void main_menu();
 
 // Macros
 #define clear_screen system("cls")
-int main(){
+#define input_capture _getch()
+int main()
+{
     main_menu();
     return 0;
 }
-void main_menu(){
+void main_menu()
+{
     clear_screen;
     welcome_screen();
+    // This Shows Main Menu
     printf("+---------------------------------------------------------------+\n");
     printf("| Enter Your Choice:                                            |\n");
     printf("| 1 -> Book an Appointment                                      |\n");
@@ -34,6 +38,12 @@ void main_menu(){
     printf("| 4 -> Chatbot                                                  |\n");
     printf("+---------------------------------------------------------------+\n");
     printf("\n");
+    // Take Input from user and check the input is between 1 to 4
+    int choice;
+    do
+    {
+        choice = input_capture;
+    } while (choice < '1' && choice > '4');
 }
 // This Shows Welcome Screen
 void welcome_screen()
