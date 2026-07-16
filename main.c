@@ -16,7 +16,7 @@
 // Functions
 void welcome_screen();
 void main_menu();
-
+char navigate_to_menu(char choice);
 // Macros
 #define clear_screen system("cls")
 #define input_capture _getch()
@@ -24,6 +24,25 @@ int main()
 {
     main_menu();
     return 0;
+}
+char navigate_to_menu(char choice)
+{
+   // Redirect user based on the selected menu option
+    switch (choice)
+    {
+    case '1':
+        book_an_appointment();
+        break;
+    case '2':
+        login();
+        break;
+    case '3':
+        blood_bank_info();
+        break;
+    case '4':
+        chatbot();
+        break;
+    }
 }
 void main_menu()
 {
@@ -39,11 +58,12 @@ void main_menu()
     printf("+---------------------------------------------------------------+\n");
     printf("\n");
     // Take Input from user and check the input is between 1 to 4
-    int choice;
+    char choice;
     do
     {
         choice = input_capture;
     } while (choice < '1' && choice > '4');
+    navigate_to_menu(choice);
 }
 // This Shows Welcome Screen
 void welcome_screen()
