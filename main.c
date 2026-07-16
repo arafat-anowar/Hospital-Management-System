@@ -15,10 +15,27 @@
 
 //Functions
 void welcome_screen();
+void main_menu();
+
+// Macros
+#define clear_screen system("cls")
 int main(){
-    welcome_screen();
+    main_menu();
     return 0;
 }
+void main_menu(){
+    clear_screen;
+    welcome_screen();
+    printf("+---------------------------------------------------------------+\n");
+    printf("| Enter Your Choice:                                            |\n");
+    printf("| 1 -> Book an Appointment                                      |\n");
+    printf("| 2 -> Login                                                    |\n");
+    printf("| 3 -> Blood Bank Information                                   |\n");
+    printf("| 4 -> Chatbot                                                  |\n");
+    printf("+---------------------------------------------------------------+\n");
+    printf("\n");
+}
+// This Shows Welcome Screen
 void welcome_screen()
 {
     printf("#################################################################\n");
