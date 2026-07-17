@@ -26,7 +26,7 @@ Members :
 #define input_capture _getche()
 #define screen_delay sleep(1)
 #define ESC 27
-// Declare Funtions Prototype Which Are In login.c
+// Declare Funtions Prototype Which Are In admin.c
 void admin_dashboard_screen();
 void admin_dashboard(char user_id[]);
 void welcome_screen();
