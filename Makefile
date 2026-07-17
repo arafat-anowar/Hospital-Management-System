@@ -19,7 +19,11 @@ OBJ = $(SRC:.c=.o)
 
 # ==========================================================
 
-all: $(TARGET)
+all: directories $(TARGET)
+
+directories:
+	if not exist build mkdir build
+	if not exist bin mkdir bin
 
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)

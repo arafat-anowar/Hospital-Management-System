@@ -16,29 +16,33 @@ void redirect_to_dashboard(char role)
     switch (role)
     {
     case 'A':
-        system("cls");
+        clear_screen;
         login_success_screen();
+        screen_delay;
         admin_dashboard(user_id);
         break;
     case 'R':
-        system("cls");
+        clear_screen;
         login_success_screen();
+        screen_delay;
         receptionist_dashboard(user_id);
         break;
     case 'D':
-        system("cls");
+        clear_screen;
         login_success_screen();
+        screen_delay;
         doctor_dashboard(user_id);
         break;
     case 'P':
-        system("cls");
+        clear_screen;
         login_success_screen();
+        screen_delay;
         patient_dashboard(user_id);
         break;
     case 'N':
         system("cls");
         login_invaild_screen();
-        // sleep(10);
+        sleep(1);
         login();
         break;
     }
@@ -115,6 +119,7 @@ void login()
     char user_name[30], user_password[30];
     printf("Enter Your Username : ");
     scanf("%s", user_name);
+    printf("\n");
     printf("Enter Your Password : ");
     scanf("%s", user_password);
     // Pass credentials for verify
