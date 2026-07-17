@@ -20,10 +20,13 @@ Members :
 // Macros
 #define clear_screen system("cls")
 #define input_capture _getche()
-#define screen_delay sleep(1)
+#define screen_delay sleep(4)
 #define ESC 27
 #define EOF (-1)
 // Declare Funtions Prototype Which Are In bloodbank.c
 void blood_bank_info();
 void show_blood_available_information(char location[], char blood_group[]);
+void blood_group_not_found_screen();
+void search_result_screen();
+void return_menu_screen();
 #endif
