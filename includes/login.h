@@ -1,6 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
-
+#define clear_screen system("cls")
 void login();
 void login_screen();
 void login_success_screen();
