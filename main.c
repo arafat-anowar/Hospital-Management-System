@@ -57,10 +57,11 @@ void main_menu()
     welcome_screen();
     // This Shows Main Menu
     printf("+------------------------[ MAIN MENU ]--------------------------+\n");
-    printf("| [1] -> Book an Appointment                                    |\n");
-    printf("| [2] -> Login                                                  |\n");
-    printf("| [3] -> Blood Bank Information                                 |\n");
-    printf("| [4] -> Chatbot                                                |\n");
+    printf("| [1]   -> Book an Appointment                                  |\n");
+    printf("| [2]   -> Login                                                |\n");
+    printf("| [3]   -> Blood Bank Information                               |\n");
+    printf("| [4]   -> Chatbot                                              |\n");
+    printf("| [ESC] -> Exit                                                 |\n");
     printf("+---------------------[PRESS YOUR CHOICE]-----------------------+\n");
     // Take Input from user and check the input is between 1 to 4
     char choice;

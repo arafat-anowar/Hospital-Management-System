@@ -16,8 +16,9 @@ OBJ += build/main.o
 all: directories $(TARGET)
 
 directories:
-	if not exist build mkdir build
-	if not exist bin mkdir bin
+directories:
+	mkdir -p build
+	mkdir -p bin
 
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)

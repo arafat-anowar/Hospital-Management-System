@@ -20,10 +20,10 @@ Members :
 #include "receptionist.h"
 #include "doctor.h"
 #include "patient.h"
-#include "bloodbank.h"
 // Macros
 #define clear_screen system("cls")
 #define input_capture _getche()
+#define screen_delay sleep(1)
 #define ESC 27
 // Declare Funtions Prototype Which Are In login.c
 void login();
@@ -32,6 +32,4 @@ void login_success_screen();
 void login_invaild_screen();
 char login_verify(char user_name[], char user_password[]);
 void redirect_to_dashboard(char role);
-// Functions From Another Header File
-// void welcome_screen();
 #endif
