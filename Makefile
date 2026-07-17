@@ -5,34 +5,34 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Iincludes
 
-TARGET = bin/hospital.exe
+TARGET = hospital
 
-SRC = $(wildcard src/*.c)
-OBJ = $(patsubst src/%.c,build/%.o,$(SRC))
-OBJ += build/main.o
+SRC = main.c \
+      src/admin.c \
+      src/bloodbank.c \
+      src/doctor.c \
+      src/login.c \
+      src/patient.c \
+      src/receptionist.c
+
+OBJ = $(SRC:.c=.o)
 
 # ==========================================================
 
-all: directories $(TARGET)
-
-directories:
-	if not exist build mkdir build
-	if not exist bin mkdir bin
+all: $(TARGET)
 
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
 
-build/%.o: src/%.c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-build/main.o: main.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-run: all
-	.\bin\hospital.exe
 
 clean:
-	del /Q build\*.o 2>nul
-	del /Q bin\hospital.exe 2>nul
+	del /Q *.o 2>nul
+	del /Q src\*.o 2>nul
+	del /Q $(TARGET).exe 2>nul
+
+run: $(TARGET)
+	.\$(TARGET).exe
 
 rebuild: clean all
