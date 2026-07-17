@@ -18,6 +18,7 @@ Khulna AB+ 01911111114 Arif_Khan
 Khulna B- 01911111115 Tamanna_Rahman
 
 Rajshahi O+ 01611111111 Shuvo_Das
+Rajshahi O+ 01811111113 Sharmin_Akter
 Rajshahi A- 01611111112 Mehedi_Hasan
 Rajshahi B+ 01611111113 Tanvir_Ahmed
 Rajshahi AB- 01611111114 Rafiul_Islam

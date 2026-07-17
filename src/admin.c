@@ -117,7 +117,7 @@ void admin_menu()
     printf("|  [4]   -> Manage Appoinment                                   |\n");
     printf("|  [5]   -> Manage Blood Bank                                   |\n");
     printf("|  [6]   -> Search User By ID                                   |\n");
-    printf("| [ESC] -> Logout                                               |\n");
+    printf("| [ESC]  -> Logout                                              |\n");
     printf("+---------------------[PRESS YOUR CHOICE]-----------------------+\n");
     char choice;
     do
