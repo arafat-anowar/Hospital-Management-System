@@ -12,9 +12,15 @@ SRC = main.c \
 	src/doctor.c \
 	src/receptionist.c \
 	src/patient.c \
-	src/bloodbank.c \
+	src/bloodbank.c
 
-OBJ = $(patsubst %.c,build/%.o,$(SRC))
+OBJ = build/main.o \
+	build/admin.o \
+	build/login.o \
+	build/doctor.o \
+	build/receptionist.o \
+	build/patient.o \
+	build/bloodbank.o
 
 TARGET = bin/hospital.exe
 
@@ -26,9 +32,12 @@ $(TARGET): $(OBJ)
 	mkdir -p bin
 	$(CC) $(OBJ) -o $(TARGET)
 
-build/%.o: %.c
+build/main.o: main.c
 	mkdir -p build
-	mkdir -p build/src
+	$(CC) $(CFLAGS) -c $< -o $@
+
+build/%.o: src/%.c
+	mkdir -p build
 	$(CC) $(CFLAGS) -c $< -o $@
 
 run: $(TARGET)
