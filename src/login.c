@@ -13,6 +13,7 @@ Members :
 // Header File Add
 #include <login.h>
 
+//Global Variable
 char user_id[20];
 
 // Redirect User To Their Dashboard
@@ -45,9 +46,9 @@ void redirect_to_dashboard(char role)
         patient_dashboard(user_id);
         break;
     case 'N':
-        system("cls");
+        clear_screen;
         login_invaild_screen();
-        sleep(1);
+        screen_delay;
         login();
         break;
     }

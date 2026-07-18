@@ -20,7 +20,6 @@ Members :
 #include "receptionist.h"
 #include "doctor.h"
 #include "patient.h"
-#include "bloodbank.h"
 // Macros
 #define clear_screen system("cls")
 #define input_capture _getche()
