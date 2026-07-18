@@ -16,17 +16,37 @@ Members :
 #include <windows.h>
 #include <unistd.h>
 #include <conio.h>
+#include <string.h>
 // Local Header Files
 #include "login.h"
 #include "receptionist.h"
 #include "doctor.h"
 #include "patient.h"
 #include "bloodbank.h"
+
 // Macros
 #define clear_screen system("cls")
 #define input_capture _getche()
 #define screen_delay sleep(1)
 #define ESC 27
+// Structures
+struct doctor
+{
+    int doctor_id;
+    char first_name[30];
+    char last_name[30];
+    int age;
+    char gender[10];
+    char specialization[50];
+    char qualification[50];
+    int experience;
+    char phone[20];
+    char email[50];
+    char schedule[50];
+    char username[30];
+    char password[30];
+};
+
 // Declare Funtions Prototype Which Are In admin.c
 void admin_dashboard_screen();
 void admin_dashboard(char user_id[]);
@@ -45,4 +65,5 @@ void manage_patient();
 void manage_appointments();
 void manage_bills();
 void search_user_by_id();
+void genarate_user_id_password(char first_name[],char last_name[],int doctor_id);
 #endif

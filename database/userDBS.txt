@@ -14,3 +14,6 @@ ID Username Password Role
 4004 patient4 pat321 Patient
 4005 patient5 pat654 Patient
 4006 patient6 pat987 Patient
+7875392                    rahimuddin                       doc1001 Doctor
+
+7875392                 tanvirhossain                       doc1001 Doctor
